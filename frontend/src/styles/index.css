@@ -1,0 +1,29 @@
+.expense-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.expense-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.expense-amount {
+  color: #00ff80;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #e63946;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c51e2d;
+}
