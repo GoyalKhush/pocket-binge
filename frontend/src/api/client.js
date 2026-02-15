@@ -1,6 +1,7 @@
 // frontend/src/api/client.js
 
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = import.meta.env.VITE_API_URL;
+
 
 // ADD EXPENSE
 export const addExpense = async (data, token) => {
@@ -71,7 +72,8 @@ export const deleteExpense = async (id, token) => {
 };
 
 export const loginUser = async (email, password) => {
-  const res = await fetch("http://localhost:5000/api/auth/login", {
+  const res = await fetch(`${BASE_URL}/auth/login`, {
+
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
